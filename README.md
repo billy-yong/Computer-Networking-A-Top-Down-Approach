@@ -1,56 +1,15 @@
-# Computer-Networking-A-Top-Down-Approach
-Notes and diagrams about computer networking
+# Computer Networks Study Notes
 
-## **Chapter 4: Network Layer - Data Plane**
+This repository contains structured and concise notes on computer networks, covering key concepts, protocols, and examples. It is organized into three main sections: Transport Layer, Network Layer, and Application Layer. The aim is to provide a comprehensive reference for students, engineers, and networking enthusiasts.
 
-### **1. 데이터 플레인 개요**
+## Folder Overview
+- **`transport-layer/`**: Covers TCP, UDP, congestion control, and socket programming.
+- **`network-layer/`**: Explains IP addressing, routing protocols (OSPF, BGP), and forwarding mechanisms.
+- **`application-layer/`**: Includes HTTP, HTTPS, DNS, and email protocols.
+- **`examples/`**: Provides diagrams, traceroute outputs, and practical examples.
 
-- **역할**: 데이터 패킷을 송신자에서 수신자로 전달.
-- **구성 요소**:
-    - **전송**: 패킷을 적절한 출력 포트로 이동 (Forwarding).
-    - **라우팅**: 패킷이 송신지에서 목적지까지 가는 경로 결정.
+## Contributing
+Feel free to fork this repository and submit pull requests to improve the content. Contributions are welcome!
 
-### **2. 라우터 구조**
-
-- **입력 포트**: 패킷 수신, 라우팅 테이블 기반으로 다음 홉 결정.
-- **스위칭 패브릭**: 입력 포트에서 출력 포트로 데이터 전송.
-- **출력 포트**: 패킷을 네트워크로 전송, 혼잡 관리 수행.
-- **큐잉**: 대기열 관리를 통해 패킷 손실 최소화.
-
----
-
-### **3. 전송 방식**
-
-- **Longest Prefix Matching**: 가장 긴 접두사를 기준으로 라우팅 결정.
-- **스위칭 패브릭 유형**:
-    - **메모리 기반**: CPU 제어로 패킷 처리.
-    - **버스 기반**: 공유 버스를 통해 데이터 전송.
-    - **인터커넥션 네트워크**: 병렬 처리를 통해 고속 스위칭 지원.
-
----
-
-### **4. IP 프로토콜**
-
-- **IPv4**: 32비트 주소, 데이터그램 기반.
-- **IPv6**: 128비트 주소, 확장성과 성능 개선.
-- **NAT (Network Address Translation)**: 로컬 네트워크의 여러 장치가 하나의 공용 IP 주소 공유.
-
----
-
-### **5. 패킷 스케줄링 및 혼잡 관리**
-
-- **FCFS**: 도착 순서대로 패킷 전송.
-- **우선순위 스케줄링**: 높은 우선순위의 패킷을 먼저 처리.
-- **라운드 로빈**: 각 큐에서 순환하며 패킷 전송.
-- **WFQ (Weighted Fair Queueing)**: 대역폭 보장.
-
----
-
-## **Chapter 5: Network Layer - Control Plane**
-
-### **1. 제어 플레인 개요**
-
-- **역할**: 네트워크 전역에서 데이터 전송 경로를 결정.
-- **구조**:
-    - **전통적 방식**: 각 라우터에서 경로 계산 수행.
-    - **SDN (Software-Defined Networking)**: 중앙 제어기에서 경로 계산.
+## License
+This project is licensed under the MIT License.
